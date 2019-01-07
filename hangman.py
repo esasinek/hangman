@@ -35,7 +35,7 @@ def turn(field, tries):
             for j in indices:
                 field[j] = ch
         else:
-            print("Špatně. Toto písmeno ve slovu není. Stavíme šibenici.")
+            print("Špatně. Toto písmeno ve slovu není. Stavím šibenici.")
             tries += 1
     else:
         print("To nebylo písmeno. Zkusíš to znovu?")
@@ -180,7 +180,7 @@ while hra == "ano":
                 elif hra == "ne":
                     raise ValueError("End of game")
                 else:
-                    print("To rozhodně není ano. Beru to tedy jako ne. Čau!")
+                    print("To rozhodně nebylo ano.")
                     raise ValueError("End of game")
             elif didhewinyet(field) == True:
                     show_current(field)
