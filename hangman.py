@@ -191,7 +191,7 @@ while hra == "ano":
                     elif hra == "ne":
                         raise ValueError("End of game")
                     else:
-                        print("To rozhodně není ano. Beru to tedy jako ne. Čau!")
+                        print("To rozhodně nebylo ano.")
                         raise ValueError("End of game")
 
     except ValueError as e:
