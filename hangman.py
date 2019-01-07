@@ -5,7 +5,7 @@
 
 from random import choice
 
-words = ["andulka", "smrk", "televize", "jablko", "kominík", "řepa", "konvalinka", "sasanka", "křišťál", "řeřicha", "kvásek", "kobyla", "kampaň", "šalvěj", "sárí"]
+words = ["andulka", "kombinéza", "jalovice", "koloniál", "pokolení", "kartářka", "kiosek", "kamizolka", "komár", "rákoska", "nádeník", "dudlík", "smrk", "televize", "jablko", "kominík", "řepa", "konvalinka", "sasanka", "křišťál", "řeřicha", "kvásek", "kobyla", "kampaň", "šalvěj", "sárí"]
 
 def choose(list_of_words):
     chosen_word = choice(words)
