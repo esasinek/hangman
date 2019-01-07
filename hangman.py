@@ -1,8 +1,3 @@
-# přidat:
-# - když uživatel prohraje, ukaž mu slovo
-
-
-
 from random import choice
 
 words = ["andulka", "kombinéza", "jalovice", "koloniál", "pokolení", "kartářka", "kiosek", "kamizolka", "komár", "rákoska", "nádeník", "dudlík", "smrk", "televize", "jablko", "kominík", "řepa", "konvalinka", "sasanka", "křišťál", "řeřicha", "kvásek", "kobyla", "kampaň", "šalvěj", "sárí"]
@@ -31,11 +26,11 @@ def turn(field, tries):
     list_of_letters = ["a", "á", "b", "c", "č", "d", "ď", "e", "é", "ě", "f", "g", "h", "i", "í", "j", "k", "l", "m", "n", "ň", "o", "ó", "p", "q", "r", "ř", "s", "š", "t", "ť", "u", "ú", "ů", "v", "w", "x", "y", "ý", "z", "ž"]
     if ch in list_of_letters:
         if ch in word:
-            indices = [i for i, x in enumerate(word) if x == ch]    # tomuhle ještě úplně nerozumím
+            indices = [i for i, x in enumerate(word) if x == ch]
             for j in indices:
                 field[j] = ch
         else:
-            print("Špatně. Toto písmeno ve slovu není. Stavím šibenici.")
+            print("Špatně. Toto písmeno ve slově není. Stavím šibenici.")
             tries += 1
     else:
         print("To nebylo písmeno. Zkusíš to znovu?")
@@ -149,10 +144,6 @@ def didhewinyet(current_field):
         return False
     else:
         return True
-
-# def new_game():
-#     w = choose(words)
-#     f = make_it_the_field(w)
 
 
 print("""\nZahrajeme si hru Šibenice.\n
