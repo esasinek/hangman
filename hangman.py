@@ -1,3 +1,8 @@
+# přidat:
+# - když uživatel prohraje, ukaž mu slovo
+
+
+
 from random import choice
 
 words = ["andulka", "smrk", "televize", "jablko", "kominík", "řepa", "konvalinka", "sasanka", "křišťál", "řeřicha", "kvásek", "kobyla", "kampaň", "šalvěj", "sárí"]
@@ -168,11 +173,14 @@ while hra == "ano":
             field, unsuccessful_tries = turn(field, unsuccessful_tries)
             pick_picture(unsuccessful_tries)
             if unsuccessful_tries >= 10:
-                hra = input("Bohužel jsi prohrál. Chceš hrát znovu? Napiš ano/ne.\n").lower()
+                hra = input(("Bohužel jsi prohrál. Správné slovo bylo '{}'.Chceš hrát znovu? Napiš ano/ne.\n").format(word)).lower()
                 if hra == "ano":
                     print("\nNOVÁ HRA\n")
                     break
                 elif hra == "ne":
+                    raise ValueError("End of game")
+                else:
+                    print("To rozhodně není ano. Beru to tedy jako ne. Čau!")
                     raise ValueError("End of game")
             elif didhewinyet(field) == True:
                     show_current(field)
@@ -182,8 +190,12 @@ while hra == "ano":
                         break
                     elif hra == "ne":
                         raise ValueError("End of game")
+                    else:
+                        print("To rozhodně není ano. Beru to tedy jako ne. Čau!")
+                        raise ValueError("End of game")
+
     except ValueError as e:
         if e.args[0] == "End of game":
-            print("Dobře. Tak na viděnou příště!")
+            print("Dobře, nebudu tě přemlouvat. Tak na viděnou příště!")
         else:
             raise
