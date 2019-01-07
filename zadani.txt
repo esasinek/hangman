@@ -120,6 +120,6 @@ OBRÁZKY:
 
 Funguje-li ti předchozí hra, můžeš ji vylepšit.
 
-    Zařiď, aby fungovala slova s více stejnými písmeny.
-    Když hráč nezadá písmeno (zadá např. ABC nebo !), nepovažuj to za tah.
-    Po skončení dej hráči možnost hru opakovat.
+ok    Zařiď, aby fungovala slova s více stejnými písmeny.
+ok    Když hráč nezadá písmeno (zadá např. ABC nebo !), nepovažuj to za tah.
+ok    Po skončení dej hráči možnost hru opakovat.
